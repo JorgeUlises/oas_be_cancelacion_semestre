@@ -5,13 +5,15 @@ import (
 	"encoding/json"
 	"github.com/juusechec/oas_be_cancelacion_semestre/models"
 
-	"github.com/astaxie/beego"
+	"github.com/juusechec/oas_be_cancelacion_semestre/myBeego"
+	//"github.com/astaxie/beego"
 	"github.com/juusechec/jwt-beego"
 )
 
 // Operations about Users
 type UserController struct {
-	beego.Controller
+	//beego.Controller
+	myBeego.Controller
 }
 
 // @Title CreateUser
@@ -128,6 +130,8 @@ func (u *UserController) Logout() {
 func (u *UserController) GetToken() {
 	username := u.Ctx.Input.Query("username")
 	password := u.Ctx.Input.Query("password")
+	//username := "admin"
+	//password := "mipassword"
 
 	tokenString := ""
 	if username == "admin" && password == "mipassword" {
