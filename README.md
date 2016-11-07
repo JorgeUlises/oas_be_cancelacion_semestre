@@ -43,7 +43,7 @@ go get github.com/goinggo/tracelog
 Para ejecutar las pruebas se puede hacer:
 ```bash
 $ bee run &
-$ cd test/endpointTests
+$ cd tests
 $ go test
 ```
 
